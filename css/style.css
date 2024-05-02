@@ -311,7 +311,10 @@ body::after {
 .popup_show .popup__content {
   visibility: visible;
   -webkit-transform: scale(1);
-  transform: scale(1)
+  transform: scale(1);
+  transition: -webkit-transform .3s ease 0s;
+  transition: transform .3s ease 0s;
+  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s
 }
 .popup__wrapper {
   display: flex;
@@ -328,9 +331,6 @@ body::after {
   visibility: hidden;
   -webkit-transform: scale(0);
   transform: scale(0);
-  transition: -webkit-transform .3s ease 0s;
-  transition: transform .3s ease 0s;
-  transition: transform .3s ease 0s,-webkit-transform .3s ease 0s;
   background-color: #fff;
   border-radius: .875rem;
   padding: 2.5rem;
@@ -508,6 +508,36 @@ h2 {
   font-weight: 700;
   line-height: 140%
 }
+.button-to-top {
+  position: fixed;
+  bottom: 3.125rem;
+  right: 3.125rem;
+  z-index: 4;
+  -webkit-transform: translateY(-.625rem);
+  transform: translateY(-.625rem);
+  transition: all .3s;
+  opacity: 0;
+  pointer-events: none
+}
+.button-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+.button-to-top button {
+  background-color: var(--blue-not-saturated);
+  transition: all .3s;
+  width: 3.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.75rem;
+  border-radius: 50%
+}
+.button-to-top button:hover {
+  background-color: var(--electric-blue)
+}
 .subtitle-h2 {
   font-size: 1rem;
   font-weight: 600;
@@ -542,6 +572,11 @@ h2 {
 }
 .header {
   padding: 1.25rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
   background-color: var(--blue-not-saturated)
 }
 .header__content {
@@ -692,6 +727,11 @@ h2 {
 }
 .footer__social li a:hover {
   background-color: var(--orange)
+}
+i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center
 }
 .swiper {
   margin-left: auto;
@@ -3305,6 +3345,9 @@ button.swiper-pagination-bullet {
 .programs .spollers__item {
   border-bottom: 1px solid #261f67
 }
+.programs .spollers__item:first-child .spollers__title {
+  padding-top: 0
+}
 .programs .spollers__title {
   width: 100%;
   cursor: pointer;
@@ -3348,7 +3391,7 @@ button.swiper-pagination-bullet {
   display: none
 }
 .programs .spollers__body {
-  margin-top: 1.25rem
+  margin-bottom: 1.25rem
 }
 .programs .spollers__body .programs__table .line {
   display: inline-flex;
@@ -3620,6 +3663,11 @@ button.swiper-pagination-bullet {
 .partners__list {
   display: grid
 }
+.partners__list a {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 .partners__list img {
   max-width: 100%;
   -o-object-fit: cover;
@@ -3776,10 +3824,8 @@ button.swiper-pagination-bullet {
   .hero__content .content-hero__footer .buttons {
     gap: 1.5rem
   }
-  .programs .spollers {
-    gap: 2rem
-  }
-  .programs .spollers__item {
+  .programs .spollers__title {
+    padding-top: 2rem;
     padding-bottom: 2rem
   }
   .programs__row-title {
@@ -3932,8 +3978,8 @@ button.swiper-pagination-bullet {
   .header__actions--mob {
     display: none
   }
-  .header__actions-mob {
-    display: none
+  .page {
+    padding-top: 5.75rem
   }
   .results {
     min-height: 11.875rem;
@@ -4008,6 +4054,9 @@ button.swiper-pagination-bullet {
   .prices {
     padding-bottom: 6.25rem
   }
+  .registration {
+    margin-bottom: 3.75rem
+  }
 }
 @media (max-width:80em) {
   .section-margin-bottom {
@@ -4056,6 +4105,9 @@ button.swiper-pagination-bullet {
   }
   .prices {
     padding-bottom: 5rem
+  }
+  .registration {
+    margin-bottom: 2.5rem
   }
 }
 @media (max-width:500px) {
@@ -4121,6 +4173,9 @@ button.swiper-pagination-bullet {
     display: flex;
     align-items: center;
     gap: 1.875rem
+  }
+  .page {
+    padding-top: 5.375rem
   }
   .icon-menu {
     display: block;
@@ -4282,6 +4337,9 @@ button.swiper-pagination-bullet {
     padding-bottom: 1.875rem
   }
   .registration {
+    margin-bottom: 2rem
+  }
+  .registration {
     padding: 3rem 0
   }
   .registration__title {
@@ -4360,7 +4418,8 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(2,1fr)
   }
   .speakers__item img {
-    height: 12rem
+    max-height: 14rem;
+    height: 100%
   }
   .programs__row {
     margin-bottom: 3rem
@@ -4368,11 +4427,12 @@ button.swiper-pagination-bullet {
   .programs__row .buttons {
     flex-direction: column
   }
-  .programs .spollers {
-    gap: 2.75rem
+  .programs .spollers__title {
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem
   }
-  .programs .spollers__item {
-    padding-bottom: 1.25rem
+  .programs .spollers__title::before {
+    top: 1.75rem
   }
   .programs .spollers__body {
     padding-left: 0
@@ -4475,6 +4535,10 @@ button.swiper-pagination-bullet {
     font-size: 1.875pxrem;
     line-height: 130%
   }
+  .button-to-top {
+    right: 30px;
+    bottom: 30px
+  }
   .subtitle-h1 {
     font-weight: 600
   }
@@ -4523,9 +4587,6 @@ button.swiper-pagination-bullet {
   }
   .speakers__item {
     flex: 0 1 9.375rem
-  }
-  .speakers__item img {
-    height: 10rem
   }
   .speakers__header {
     margin-bottom: 2rem
@@ -4580,11 +4641,6 @@ button.swiper-pagination-bullet {
   .partners__list {
     grid-template-columns: repeat(1,1fr);
     gap: .625rem
-  }
-  .partners__list a {
-    display: flex;
-    align-items: center;
-    justify-content: center
   }
   .registration__button {
     margin-top: 2.5rem

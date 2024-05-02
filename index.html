@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240502042925">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240502133302">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,34 +47,34 @@
 						<nav class="menu__body">
 							<ul>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".about-conference" data-goto-header>
 										Про конференцію
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".programs" data-goto-header>
 										Розклад
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".speakers" data-goto-header>
 										Спікери
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".prices" data-goto-header>
 										Варіанти участі
 									</a>
 								</li>
 							</ul>
 							<div class="header__actions header__actions--mob">
-								<a href="#" class="header__action-register button button-md button-primary">Зареєструватись</a>
+								<a href="#" class="header__action-register button button-md button-primary" data-popup="#popupMain2">Зареєструватись</a>
 								<a href="#" class="header__action-callback button button-md button-primary--border">Зв’язатись</a>
 							</div>
 						</nav>
 					</div>
 					<div class="header__actions header__actions--pc">
-						<a href="#" class="header__action-register button button-md button-primary">Зареєструватись</a>
+						<a href="#" class="header__action-register button button-md button-primary" data-popup="#popupMain2">Зареєструватись</a>
 						<a href="#" class="header__action-callback button button-md button-border--white">Зв’язатись</a>
 					</div>
 					<div class="header__actions-mob">
@@ -87,6 +87,13 @@
 				</div>
 			</div>
 		</header>
+		<div class="button-to-top">
+			<button type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="12" height="34" viewBox="0 0 12 34" fill="none">
+					<path d="M6 0L0.226496 10L11.7735 10L6 0ZM7 34L7 9L5 9L5 34L7 34Z" fill="white" />
+				</svg>
+			</button>
+		</div>
 		<main class="page">
 			<section class="hero section-margin-bottom ">
 				<div class="hero__image">
@@ -167,7 +174,7 @@
 							<div class="content-hero__footer">
 								<div class="buttons">
 
-									<a href="#" class="button button-md button-primary">Зареєструватись</a>
+									<a href="#" class="button button-md button-primary" data-popup="#popupMain2">Зареєструватись</a>
 									<button type="button" class="button button-schedule button-md button-border--white_bg">Дивитись розклад</button>
 
 								</div>
@@ -778,7 +785,7 @@
 						</div>
 						<div class="programs__row">
 							<div class="buttons">
-								<a href="#" class="button button-md button-primary">Зареєструватись</a>
+								<a href="#" class="button button-md button-primary" data-popup="#popupMain2">Зареєструватись</a>
 								<a href="#" class="button button-md button-primary--border">Завантажити розклад (pdf)</a>
 							</div>
 						</div>
@@ -948,16 +955,16 @@
 									<img src="img/partners/logos.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-2.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-3.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-4.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-5.webp" alt="Image">
 								</a>
 								<a href="#">
 									<img src="img/partners/logos.webp" alt="Image">
@@ -973,19 +980,19 @@
 									<img src="img/partners/logos.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-6.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-7.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-8.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-9.webp" alt="Image">
 								</a>
 								<a href="#">
-									<img src="img/partners/logos.webp" alt="Image">
+									<img src="img/partners/logos-10.webp" alt="Image">
 								</a>
 							</div>
 						</div>
@@ -1072,7 +1079,7 @@
 							</p>
 						</div>
 						<div class="registration__button">
-							<a href="#" class="button button-md button-primary">Зареєструватись</a>
+							<a href="#" class="button button-md button-primary" data-popup="#popupMain2">Зареєструватись</a>
 						</div>
 					</div>
 				</div>
@@ -1112,22 +1119,22 @@
 						<nav class="menu__body">
 							<ul>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".about-conference">
 										Про конференцію
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".programs">
 										Розклад
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".speakers">
 										Спікери
 									</a>
 								</li>
 								<li>
-									<a href="#" class="menu__link">
+									<a href="#" class="menu__link" data-goto=".prices">
 										Варіанти участі
 									</a>
 								</li>
@@ -1141,15 +1148,15 @@
 						<p>Наші соцмережі:</p>
 
 						<ul class="footer__social">
-							<li><a href="https://www.youtube.com/@womenintechukraine" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-yb.svg" alt="https://www.youtube.com/@womenintechukraine"></a>
+							<li><a href="https://www.youtube.com/@womenintechukraine" rel="nofollow" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-yb.svg" alt="https://www.youtube.com/@womenintechukraine"></a>
 							</li>
-							<li><a href="https://www.facebook.com/womenintechukraine" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-fb.svg" alt="https://www.facebook.com/womenintechukraine"></a>
+							<li><a href="https://www.facebook.com/womenintechukraine" rel="nofollow" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-fb.svg" alt="https://www.facebook.com/womenintechukraine"></a>
 							</li>
-							<li><a href="https://t.me/womenintechukraine" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-tg.svg" alt="https://t.me/womenintechukraine"></a>
+							<li><a href="https://t.me/womenintechukraine" rel="nofollow" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-tg.svg" alt="https://t.me/womenintechukraine"></a>
 							</li>
-							<li><a href="https://www.instagram.com/womenintech.ukraine/" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-inst.svg" alt="https://www.instagram.com/womenintech.ukraine/"></a>
+							<li><a href="https://www.instagram.com/womenintech.ukraine/" rel="nofollow" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-inst.svg" alt="https://www.instagram.com/womenintech.ukraine/"></a>
 							</li>
-							<li><a href="https://www.linkedin.com/company/women-in-tech-ukraine/" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-in.svg" alt="https://www.linkedin.com/company/women-in-tech-ukraine/"></a>
+							<li><a href="https://www.linkedin.com/company/women-in-tech-ukraine/" rel="nofollow" target="_blank"><img src="https://womenintech.com.ua/wp-content/uploads/ic-in.svg" alt="https://www.linkedin.com/company/women-in-tech-ukraine/"></a>
 							</li>
 						</ul>
 					</div>
@@ -1262,13 +1269,89 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="popupMain2" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<g clip-path="url(#clip0_2824_2060)">
+								<path d="M7.23554 7.9465L0.153539 15.0285C-0.0432109 15.2253 -0.0432109 15.544 0.153539 15.7408C0.251789 15.8393 0.380789 15.8883 0.509539 15.8883C0.638539 15.8883 0.767289 15.8393 0.865539 15.7408L8.00079 8.6055L15.136 15.7408C15.2345 15.8393 15.3633 15.8883 15.492 15.8883C15.6208 15.8883 15.7498 15.8393 15.848 15.7408C16.0448 15.544 16.0448 15.2253 15.848 15.0285L8.76629 7.9465L15.8528 0.859503C16.0495 0.662753 16.0495 0.344003 15.8528 0.147253C15.656 -0.0492471 15.3373 -0.0492471 15.1408 0.147253L8.00104 7.2875L0.860539 0.147503C0.663789 -0.0489971 0.345289 -0.0489971 0.148539 0.147503C-0.0482109 0.344253 -0.0482109 0.663003 0.148539 0.859753L7.23554 7.9465Z" fill="#999999" />
+							</g>
+							<defs>
+								<clipPath id="clip0_2824_2060">
+									<rect width="16" height="16" fill="white" />
+								</clipPath>
+							</defs>
+						</svg>
+					</button>
+					<div class="popup__body">
+						<form action="#" class="popup__form form" method="POST">
+
+							<div class="form__row row-header">
+								<h5 class="popup__form-title">Заповніть форму</h5>
+							</div>
+							<div class="form__row">
+								<div class="form__line">
+									<div class="form__col">
+										<label for="name">Ім’я*</label>
+										<input autocomplete="off" type="text" id="name" name="name" data-error="Помилка" required placeholder="Ім’я" class="input">
+									</div>
+									<div class="form__col form__error">
+										<label for="lastName">Прізвище</label>
+										<input autocomplete="off" type="text" id="lastName" name="lastName" data-error="Помилка" placeholder="Прізвище" class="input">
+										<div class="_form-error">
+											Введіть прізвище без пробілів та символів.
+										</div>
+									</div>
+								</div>
+								<div class="form__line">
+									<div class="form__col">
+										<label for="company">Компанія*</label>
+										<input autocomplete="off" type="text" id="company" name="company" data-error="Помилка" required placeholder="Компанія*" class="input">
+									</div>
+									<div class="form__col">
+										<label for="posada">Посада*</label>
+										<input autocomplete="off" type="text" id="posada" name="posada" data-error="Помилка" required placeholder="Посада*" class="input">
+									</div>
+								</div>
+								<div class="form__line">
+									<div class="form__col">
+										<label for="mail">Електронна пошта*</label>
+										<input autocomplete="off" type="text" id="mail" name="mail" data-error="Помилка" required placeholder="Пошта*" class="input">
+									</div>
+									<div class="form__col">
+										<label for="phone">Телефон*</label>
+										<input autocomplete="off" type="text" id="phone" name="phone" data-error="Помилка" required placeholder="Телефон*" class="input field-input phone-mask-with-codes phone-mask-without-code">
+									</div>
+								</div>
+								<div class="form__line description">
+									<small>*поле є обов’язковим для заповнення</small>
+								</div>
+								<div class="form__line action">
+									<button type="submit" class="button button-md button-primary">Подати заявку</button>
+								</div>
+								<div class="form__line message description text-orange">
+									<svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+										<path d="M1.5 4.5L4.83333 7.5L11.5 1.5" stroke="#FF8000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+									<p>
+										Дані успішно збережено. Запрошення надійде на пошту.
+									</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?ver=6.5.2&_v=20240502042925" id="wit-jq-js"></script>
-	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/swiper-bundle.min.js?ver=6.5.2&_v=20240502042925" id="wit-swiper-js"></script>
-	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/select2.min.js?ver=6.5.2&_v=20240502042925" id="wit-select2-js"></script>
-	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/intlTelInput.min.js?ver=6.5.2&_v=20240502042925" id="wit-intlTelInput-js"></script>
-	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/utils.js?ver=6.5.2&_v=20240502042925" id="wit-utils-js"></script>
-	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/jquery.maskedinput.min.js?ver=6.5.2&_v=20240502042925" id="wit-maskedinput-js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?ver=6.5.2&_v=20240502133302" id="wit-jq-js"></script>
+	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/swiper-bundle.min.js?ver=6.5.2&_v=20240502133302" id="wit-swiper-js"></script>
+	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/select2.min.js?ver=6.5.2&_v=20240502133302" id="wit-select2-js"></script>
+	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/intlTelInput.min.js?ver=6.5.2&_v=20240502133302" id="wit-intlTelInput-js"></script>
+	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/utils.js?ver=6.5.2&_v=20240502133302" id="wit-utils-js"></script>
+	<script type="text/javascript" src="https://womenintech.com.ua/wp-content/themes/WIT/assets/js/jquery.maskedinput.min.js?ver=6.5.2&_v=20240502133302" id="wit-maskedinput-js"></script>
 	<script>
 		jQuery(document).ready(function($) {
 
@@ -1278,16 +1361,19 @@
 
 
 			if ($('.phone-mask-with-codes').length) {
-				let input = document.querySelector(".phone-mask-with-codes");
-				window.intlTelInput(input, {
-					initialCountry: 'ua',
-					onlyCountries: ["ua", "pl", "fr", "de", "it"],
-				})
+				let inputs = document.querySelectorAll(".phone-mask-with-codes");
+				inputs.forEach(input => {
+					window.intlTelInput(input, {
+						initialCountry: 'ua',
+						excludeCountries: ["ru", "by"] // Виключаємо Росію та Білорусію
+					});
+				});
+
 			}
 
 		});
 	</script>
-	<script src="js/app.min.js?_v=20240502042925"></script>
+	<script src="js/app.min.js?_v=20240502133302"></script>
 </body>
 
 </html>
