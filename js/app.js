@@ -617,26 +617,6 @@
             }));
         }
     }), 0);
-    const smoothMoveToSectionSchedule = () => {
-        const buttons = document.querySelectorAll(".button-schedule");
-        const programsSection = document.querySelector(".programs");
-        if (!buttons.length) {
-            console.error("No schedule buttons found!");
-            return;
-        }
-        if (!programsSection) {
-            console.error("Programs section not found!");
-            return;
-        }
-        const scrollToPrograms = () => {
-            programsSection.scrollIntoView({
-                behavior: "smooth"
-            });
-        };
-        buttons.forEach((button => {
-            button.addEventListener("click", scrollToPrograms);
-        }));
-    };
     const changePrograms = () => {
         const buttons = document.querySelectorAll(".form__program");
         const checkButtons = document.querySelectorAll(".button-check-program");
@@ -703,7 +683,6 @@
         if (window.scrollY > scrollAmountToShowButton) buttonToTop.classList.add("visible"); else buttonToTop.classList.remove("visible");
     }));
     changePrograms();
-    smoothMoveToSectionSchedule();
     window["FLS"] = true;
     menuInit();
     spollers();
